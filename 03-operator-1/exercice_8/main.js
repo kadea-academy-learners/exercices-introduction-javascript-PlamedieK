@@ -55,4 +55,4 @@ if(totalDepenses > salaireMensuel*0.9){
 else{
     console.log("Budget sous contrôle");
 }
-// module.exports = { salaireMensuel, loyer, nourriture, transport, autresDepenses, totalDepenses, reste };
+module.exports = { salaireMensuel, loyer, nourriture, transport, autresDepenses, totalDepenses, reste };
