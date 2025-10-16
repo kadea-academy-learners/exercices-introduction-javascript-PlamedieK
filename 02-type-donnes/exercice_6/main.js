@@ -5,3 +5,5 @@
     let estConnecte = true;
     let valeurNulle = null;
     let coucou = undefined;
+
+    module.exports = { age, nom, estConnecte, valeurNulle, coucou };

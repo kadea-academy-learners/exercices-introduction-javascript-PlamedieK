@@ -7,3 +7,5 @@ function celsiusToFahrenheit(celsius) {
 }
 
 console.log(celsiusToFahrenheit(celsius)); // Affiche la température en degrés Fahrenheit
+
+module.exports = { celsius, celsiusToFahrenheit };
