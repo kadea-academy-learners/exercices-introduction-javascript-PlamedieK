@@ -1,2 +1,3 @@
 //écrire votre code ici
-console.log("Hello world") //ceci est une salutation
+//Ce programme affiche un message Hello World
+console.log("Hello world");

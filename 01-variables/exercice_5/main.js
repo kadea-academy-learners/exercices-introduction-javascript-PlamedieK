@@ -1,12 +1,11 @@
 // Exercice 5
 // Écrivez votre code ici
-// Exercice 5
-// Écrivez votre code ici
 
-let temp = 28; // La température en Celsius
-let Fahrenheit = null;
+let celsius = 25; // Température en degrés Celsius
+function celsiusToFahrenheit(celsius) {
+  return (celsius * 9 / 5) + 32; 
+}
 
-// On utilise la variable 'temp' pour le calcul
-Fahrenheit = temp * 9/5 + 32;
+console.log(celsiusToFahrenheit(celsius)); // Affiche la température en degrés Fahrenheit
 
-console.log(Fahrenheit);
+module.exports = { celsius, celsiusToFahrenheit };

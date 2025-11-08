@@ -1,36 +1,36 @@
 // Exercice 9
 // Écrivez votre code ici
-const valMaison = 60000000;
-const valTerrain = 40000000;
-const valLiquide = 20000000;
 
-let categorie_1 = null; // déclaration et affectation de la variable avec null
-let categorie_2 = null; // déclaration et affectation de la variable avec null
+// Répartition de l'héritage de Monsieur Jean MUKUNA
 
-const patrimoine = valMaison+valTerrain+valLiquide; // calcul du patrimoine total
+const totalHeritage = 60000000 + 40000000 + 20000000;
 
-categorie_1 = patrimoine * 75/100; // calcule du patrimoine pour la catégorie 1
-categorie_2 = patrimoine * 25/100; // calcule du patrimoine pour la catégorie 2
+const partPremiereCategorie = totalHeritage * 0.75;
+const partEnfant = partPremiereCategorie / 3;
 
-const partEnfant = categorie_1*1/3; // calcule pour les part des enfants
-const partPaul = partEnfant;        //déclaration et initialition de la constante avec un tier du patrimone catégorie 1 au profit de Paul
-partMarie = partEnfant;             //déclaration et initialition de la constante avec un tier du patrimone catégorie 1 au profit de Marie
+// Répartition entre les enfants
+const paul = partEnfant;
+const marie = partEnfant;  
+const eric = partEnfant / 2; 
+const clair = partEnfant / 2;
 
-const part_Enfant_Alain = partEnfant*1/2; //déclaration et initialition de la constante avec un tier au profit des  enfants de Alain
-const partEric = part_Enfant_Alain;        //déclaration et initialition de la constante avec la moitié attribuée a Paul enfant du défunt
-const partClaire = part_Enfant_Alain         //déclaration et initialition de la constante avec la moitié attribuée a Claire enfant du défunt
+//  Deuxième catégorie : le conjoint et les frères/nièce
+const partDeuxiemeCategorie = totalHeritage * 0.25; 
+const partConjointEtFreres = partDeuxiemeCategorie / 3;
 
-const partPersonne=categorie_2*1/3; // calcule pour les part pour la catégorie 2
-const part_Mme_MUKUNA = partPersonne;     //déclaration et initialition de la constante avec un tier du patrimone catégorie 2 au profit de Mme MUKUNA
-const part_Joseph=partPersonne;           //déclaration et initialition de la constante avec un tier du patrimone catégorie 2 au profit de Joseph
-const part_Sarah=partPersonne;             //déclaration et initialition de la constante avec un tier du patrimone catégorie 2 au profit de Sarah
+// Répartition entre le conjoint et les frères/nièce
+const madameMukuna = partConjointEtFreres;
+const joseph = partConjointEtFreres;  
+const sarah = partConjointEtFreres; 
 
-// console.log(part_Mme_MUKUNA+" "+part_Joseph+" "+part_Sarah);
+//  Affichage clair dans la console
+console.log(`Paul : ${paul} CDF`);
+console.log(`Marie : ${marie} CDF`);
+console.log(`Éric : ${eric} CDF`);
+console.log(`Claire : ${clair} CDF`);
+console.log(`Madame MUKUNA : ${madameMukuna} CDF`);
+console.log(`Joseph : ${joseph} CDF`);
+console.log(`Sarah : ${sarah} CDF`);
 
-console.log("- Paul "+"a comme part dans le patrimoine          : "+partPaul);      //  part de Paul** 
-console.log("- Marie "+"a comme part dans le patrimoine         : "+partMarie);  //  part de Marie** 
-console.log("- Eric "+"a comme part dans le patrimoine          : "+partEric);      //  part de Eric** 
-console.log("- Claire "+"a comme part dans le patrimoine        : "+partClaire);     //  part de Claire** 
-console.log("- Madame MUKUNA "+"a comme part dans le patrimoine : "+part_Mme_MUKUNA);  //  part de Mme MUKUNA** 
-console.log("- Joseph "+"a comme part dans le patrimoine        : "+part_Joseph);        //  part de Joseph** 
-console.log("- Sarah "+"a comme part dans le patrimoine         : "+part_Sarah);         //  part de Sarah** 
+// 5️⃣ Export des variables pour les tests Jest
+module.exports = { paul, marie, eric, clair, madameMukuna, joseph, sarah };
